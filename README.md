@@ -6,7 +6,7 @@ This sample will show a couple of 3d planes on which the video stream of the par
 How to Run the sample
 -------------------------
 
-For the sake of simplicity, this sample already has OpenTok Windows SDK v2.12.0 in the `DLL/` folder. However, you might want to update the SDK to the latest version of it. Please check [OpenTok at NuGet gallery](https://www.nuget.org/packages/OpenTok.Client/).
+For the sake of simplicity, this sample already has OpenTok Windows SDK v2.16.0 in the `DLL/` folder. However, you might want to update the SDK to the latest version of it. Please check [OpenTok at NuGet gallery](https://www.nuget.org/packages/OpenTok.Client/).
 
 In the `Assets` Folder, you will also find a version of [NativePlugin](../../NativePlugin/RenderPlugin) already built into a DLL so you can open this project, fill the typical `API_KEY`, `TOKEN`, and `SESSION_ID` data and run the project.
 
