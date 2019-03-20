@@ -82,7 +82,11 @@ public class OpenTokVideoCapturer: IVideoCapturer
 
                     int h = webcamTexture.videoVerticallyMirrored ? height : -height;
                     VideoFrame frame = VideoFrame.CreateFrameFromBuffer(PixelFormat.FormatAbgr32, width, h, gcHandle.AddrOfPinnedObject());
-                    frameConsumer?.Consume(frame);
+                    int rotation = webcamTexture.videoRotationAngle;
+                    if ((rotation == 0 || rotation == 180) && !webcamTexture.videoVerticallyMirrored) {
+                        rotation = (rotation + 180) % 360;
+                    }                    
+                    frameConsumer?.Consume(frame, rotation);
                     frame.Dispose();
                 }
             }
