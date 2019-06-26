@@ -28,7 +28,7 @@ This script is attached to a GameObject Scene, and it will be run upon the sampl
 
 ### OpenTokSession.cs
 
-This class operates the OpenTok Windows SDK. This will connect to the session, listen for the `Connected`, or `StreamReceived` events and creating `Publisher` and `Subscriber` objects.
+This class operates the OpenTok SDK. This will connect to the session, listen for the `Connected`, or `StreamReceived` events and creating `Publisher` and `Subscriber` objects.
 
 The class takes two parameters in its constructor method, they are the GameObjects where the video will be rendered into. Note that these two GameObjects need to have a OpenTokRenderer attached.
 
