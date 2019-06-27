@@ -1,11 +1,11 @@
-Unity OpenTok Sample
+OpenTok Unity Sample
 ================================
 
 The purpose of this sample is to show OpenTok SDK usage from Unity. This sample works in all the platforms where OpenTok SDK is officially released: Windows, iOS, and Android. It works also on MacOS.
 
-This sample will show a couple of 3d planes on which the video stream of the participants in a Session will be rendered.
+This sample will show a couple of 3d planes on which the video stream of the participants in an OpenTok Session will be rendered.
 
-Given that Unity supports C# language we have used the same interface that we expose in the [Windows SDK](https://tokbox.com/developer/sdks/windows/reference/), however it is important to note that although it uses the same API, it works in **all platforms**, not just in Windows.
+Given that Unity supports C# language we have used the same interface that we expose in the [Windows SDK](https://tokbox.com/developer/sdks/windows/reference/), however it is important to note that although it uses the same API, it works on **all platforms**, not just in Windows.
 
 How to Run the sample
 -------------------------
@@ -24,11 +24,11 @@ The core of this sample lives in `Assets/Script` folder, there you will find:
 
 ### SceneScript.cs
 
-This script is attached to a GameObject Scene, and it will be run upon the sample starts. Mainly, it creates a `OpenTokSession` object, and call its `Connect()` method. Please pay attention to the `OnApplicationQuit()` method, this will be called whenever you hit _stop_ on the Unity editor. For threading and memory issues it's very important to call on `OpenTokSession.Stop()` so the required resources are freed. Since this usually takes some time, we put a waiting loop to ensure that everythig is freed before exiting `OnApplicationQuit()`.
+This script is attached to a GameObject Scene, and which will run when the sample starts. Mainly, it creates a `OpenTokSession` object, and call its `Connect()` method. Please pay attention to the `OnApplicationQuit()` method because this will be called whenever you hit _stop_ on the Unity editor. For threading and memory issues it's very important to call on `OpenTokSession.Stop()` so the required resources are freed. Since this usually takes some time, we put a waiting loop to ensure that everythig is freed before exiting `OnApplicationQuit()`.
 
 ### OpenTokSession.cs
 
-This class operates the OpenTok SDK. This will connect to the session, listen for the `Connected`, or `StreamReceived` events and creating `Publisher` and `Subscriber` objects.
+This class uses the OpenTok SDK and is responsible for connecting to the session, listening for the `Connected`, or `StreamReceived` events and creating `Publisher` and `Subscriber` objects.
 
 The class takes two parameters in its constructor method, they are the GameObjects where the video will be rendered into. Note that these two GameObjects need to have a OpenTokRenderer attached.
 
