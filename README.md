@@ -1,5 +1,6 @@
-OpenTok Unity Sample
-================================
+# OpenTok Unity Sample
+
+<img src="https://assets.tokbox.com/img/vonage/Vonage_VideoAPI_black.svg" height="48px" alt="Tokbox is now known as Vonage" />
 
 The purpose of this sample is to show OpenTok SDK usage from Unity. This sample works in all the platforms where OpenTok SDK is officially released: Windows, iOS, and Android. It works also on MacOS.
 
@@ -7,8 +8,7 @@ This sample will show a couple of 3d planes on which the video stream of the par
 
 Given that Unity supports C# language we have used the same interface that we expose in the [Windows SDK](https://tokbox.com/developer/sdks/windows/reference/), however it is important to note that although it uses the same API, it works on **all platforms**, not just in Windows.
 
-How to Run the sample
--------------------------
+## How to Run the sample
 
 For the sake of simplicity, this sample already has iOS, MacOS, Android and Windows OpenTok SDK v2.16.1 in the `Assets/DLL/` folder, so you don't need to download them.
 
@@ -17,8 +17,7 @@ You can run the sample in the Unity Editor, or you can generate a platform speci
 
 In the case of iOS you will need to setup the right code signing attributes and provisioning profiles.
 
-Exploring the Code
------------------------
+## Exploring the Code
 
 The core of this sample lives in `Assets/Script` folder, there you will find:
 
@@ -76,3 +75,21 @@ That texture is shown in the `GameObject` since it is assigned to its material.
 This class is a `IVideoCapturer` implementation and will use Unity SDK to capture images from the computer camera to send them using OpenTok SDK. Using `Unity/WebCamTexture` class we ensure that same code will run in any platform where Unity is supported.
 
 For more details on how to build a custom capturer, please refer to [our documentation](https://tokbox.com/developer/sdks/windows/reference/interface_open_tok_1_1_i_video_capturer.html).
+
+## Development and Contributing
+
+Interested in contributing? We :heart: pull requests! See the
+[Contribution](CONTRIBUTING.md) guidelines.
+
+## Getting Help
+
+We love to hear from you so if you have questions, comments or find a bug in the project, let us know! You can either:
+
+- Open an issue on this repository
+- See <https://support.tokbox.com/> for support options
+- Tweet at us! We're [@VonageDev](https://twitter.com/VonageDev) on Twitter
+- Or [join the Vonage Developer Community Slack](https://developer.nexmo.com/community/slack)
+
+## Further Reading
+
+- Check out the Developer Documentation at <https://tokbox.com/developer/>
